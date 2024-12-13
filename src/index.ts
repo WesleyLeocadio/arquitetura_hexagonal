@@ -1,6 +1,3 @@
-export function somar(a: number, b: number) {
-    return a + b
-}
+import menuPrincipal from "./menu/menuPrincipal";
 
-var a = somar(2,2);
-console.log(a);
+menuPrincipal()

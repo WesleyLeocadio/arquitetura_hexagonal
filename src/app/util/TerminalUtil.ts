@@ -28,4 +28,9 @@ export default class TerminalUtil {
         const resposta = await terminal.singleLineMenu(['Sim', 'Não']).promise
         return resposta.selectedIndex === 0 
     }
+
+    static exibirChaveValor(chave: string, valor:any){
+        terminal.yellow(chave).green(valor).white('\n')
+
+    }
 }

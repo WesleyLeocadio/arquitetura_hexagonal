@@ -1,6 +1,10 @@
 import {terminal} from 'terminal-kit';
 
 export default class TerminalUtil {
+    static async esperarEnter(): Promise<void> {
+        terminal.white('\nPressione ENTER para continuar...')
+        await terminal.inputField({echo:false}).promise
+    }
     
     static titulo(texto: string) {
         terminal.clear();
